@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Restoran Menüsü</title>
+</head>
+<body>
+
+    <header class="header"> 
+        <!-- Navigation Menu-->
+        <nav class="navigation">
+            <div class="Menu">
+                <h1>Menu</h1>
+                <a href="#"><img src="./image/Logo1.png"></a>
+                <div class="title-name">
+                    <p>KEBAPÇI ŞEVKET USTA</p>
+                </div>
+
+                <!-- Hamburger Icon -->
+                <div class="hamburger" onclick="toggleMenu()">
+                    ☰
+                </div>
+
+            </div>
+            <ul>
+                <li class="list">
+                    <a data-category="kebaplar" href="#"> KEBAPLAR </a>
+                </li>
+    
+                <li class="list">
+                    <a data-category="lahmacunlar" href="#"> LAHMACUNLAR </a>
+                </li>
+        
+                <li class="list">
+                    <a data-category="pideler" href="#"> PİDELER </a>
+                </li>
+        
+        
+                <li class="list">
+                    <a data-category="pizzalar" href="#"> PİZZALAR </a>
+                </li>
+        
+                <li class="list">
+                    <a data-category="tatlilar" href="#"> TATLILAR </a>
+                </li>
+        
+                <li class="list">
+                    <a data-category="icecekler" href="#"> İÇECEKLER </a>
+                </li>
+    
+            </ul> 
+        </nav>
+
+    </header>
+    
+
+    <!-- Section to Display Selected Menu Items -->
+
+    <div class="menu-container">
+        <h2>Ürünler</h2>
+        <table id="menuTable">
+            <thead>
+                <tr>
+                    <th>Ürün adı</th>
+                    <th>Fiyat (₺)</th>
+                </tr>
+
+                <tbody id="menuList">
+                    <tr><td colspan="2">Lütfen bir kategori seçeniz.</td></tr>
+                </tbody>
+            </thead>
+        </table>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn">↑</button>
+
+    <section class="slider-container">
+        <div class="slider-images">
+        </div>
+
+        
+        <!-- Moving Text -->
+        <div class="moving-text" id="movingText">Afiyet olsun...</div>
+
+    </section>
+
+    <!-- Footer section .....-->
+    <footer>
+        <div class="footer-container">
+            
+            <div class="footer-info">
+                <div class="footer-item">
+                    <img src="./image/location-pin.png" alt="Location">
+                    <p> Adres: Mekez Camii Karşısı Arifiye / Sakarya</p>
+                </div>
+
+                <div class="footer-item">
+                    <img src="./image/phone.png" alt="phone">
+                    <p> Telefon: 0264 229 07 67 - 0531 911 49 72 - 0507 319 97 24</p>
+                </div>
+
+                <div class="footer-item social-delivery">
+                    <a href="#" class="social-link"> <img src="./image/instagram.png" alt="instegram">
+                        <p>Instegram</p>
+                    </a>
+
+                    <div class="footer-delivery">
+                        <img src="./image/delivery-bike.png" alt="deliveryBik">
+                        <p>Hızlı Taslimat</p>
+                    </div>
+
+
+                </div>
+            </div>
+            
+           
+            <div class="footer-main">
+                <p>&copy; KEBAPÇI ŞEVKET USTA | </p>
+             </div>
+
+        </div>
+    </footer>
+
+    <!-- Link to External JavaScript File -->
+    <script src="./script.js"></script>
+</body>
+</html>

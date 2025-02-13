@@ -1,0 +1,528 @@
+
+body{
+    background-color: #010010;
+    margin: 0;
+    
+}
+
+
+/******************** Header Section... */
+.header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(10, 10, 30, 0.2); 
+    backdrop-filter: blur(15px);
+    top: 0;
+    left: 0;
+    z-index: 100; 
+    
+}
+
+/******************** Menu Section... */
+.Menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 20px;
+}
+.Menu h1{
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    color: goldenrod;
+    margin: 2px;
+    white-space: nowrap;
+}
+
+.Menu img{
+    width: 70px;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+.title-name p {
+    position: absolute;
+    color: darkgoldenrod;
+    top: 10px;
+    left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 5px 10px;
+}
+
+.navigation{
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+}
+
+.navigation ul{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    margin-right: 40px;
+    border-radius: 50px;
+    border: 3px solid rgba(10, 10, 30, 0.9); 
+    border-top-left-radius: 90px;
+    border-bottom-left-radius: 90px;
+
+}
+
+.navigation ul li{
+    position:relative;
+    list-style: none;
+    width: auto;
+    height: auto;
+    z-index: 1;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: goldenrod;
+    font-weight: bold;
+ 
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.navigation ul li a:hover {
+    letter-spacing :0.3cap;
+    background-color: green;
+
+    color: black; 
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 255, 200, 0.4); /* Glow effect */
+    transform: scale(1.1); /* Slightly enlarge the element */
+}
+
+
+/* Adding an underline animation effect */
+.navigation ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: #010010;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.navigation ul li a:hover::after {
+    width: 100%; /* Expands underline on hover */
+}
+
+/* Active underline effect */
+.navigation ul li a.active::after {
+    width: 100%;
+}
+
+/********************* Hamburger Menu (Mobile)... */
+.hamburger {
+    
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: goldenrod;
+    margin-left: 12px;
+    margin-top: 50px;
+    transform: translateY(-50%);
+
+}
+
+
+
+/************** Responsive Menu for Small Screens... */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navigation ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 30, 0.9);
+        backdrop-filter: blur(10px);
+        text-align: center;
+        padding: 10px 0;
+        z-index: 100;
+    }
+
+    .navigation ul.active {
+        display: flex;
+    }
+
+    .navigation ul li {
+        width: 100%;
+    }
+
+    .navigation ul li a {
+        display: block;
+        padding: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .navigation ul li a:hover {
+        background-color: green;
+    }
+}
+
+/******************** Menu Container... */
+.menu-container{
+    width: auto;
+    margin-top: 170px;
+    padding: 2px;
+    text-align: center;
+    background: #010010;
+    border-top: 1px solid #222;
+}
+
+.menu-container h2{
+    text-align: center;
+    color: white;
+    font-size: 34px; 
+    font-weight: bold;    
+    font-family: 'Times New Roman', Times, serif; 
+    margin: 10px;                                                               
+}
+
+#menuTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#menuTable th, #menuTable td{
+    padding: 10px;  
+    border-radius: 15px;
+    border: none;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+#menuTable td{
+    
+    background-color: rgba(255, 255, 255, 0.1); 
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    transition: background-color 0.3s ease;
+    
+}
+
+#menuTable th{
+    background-color: black;
+    color: goldenrod;
+    text-align: center;
+    font-size: 24px;
+}
+
+#menuTable th:nth-child(1) {
+    text-align: center;
+}
+
+
+#menuTable th:nth-child(2) {
+    text-align: center;
+}
+
+
+/********************** slider-container styling... */
+.slider-container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    z-index: 1;
+    
+}
+
+.slider-images{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 85%;
+    z-index: 1;
+    
+}
+
+.slider-images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.slider-image{
+    width: 130px;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.7s ease;
+    z-index: 1;
+    height: auto;
+}
+
+
+.slider-container h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+    color: black;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: -4%;
+    transform: rotate(270deg);
+    transition: transform 0.7s ease, left 0.7s ease, top 0.7s ease;
+    opacity: 1;
+}
+
+.slider-image.active{
+    width: 766px !important;
+    height: 750px !important;
+}
+
+.slider-image.active h1{
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 4px;
+    right: 4px;
+    transform: rotate(0deg);
+    color: white;
+    background: rgb(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 26px;
+    transition: transform 0.7s ease, left 0.7s ease, top 0.7s ease;
+    
+}
+
+/************************ Responsive adjustment for mobile ... */
+@media(max-width: 768px){
+    .slider-images{
+        width: 100%;
+        gap: 8px;
+        padding: 0px 10px;
+    }
+
+    .slider-image{
+        width: 100px;
+    }
+
+    .slider-image.active{
+        width: 100% !important;
+        height: 300px !important;
+    }
+
+    .slider-image.active h1{
+        font-size: 12px;
+        padding: 3px 8px;
+        font-weight: bold;
+    }
+
+    .slider-image h1 {
+        font-size: 12px;
+        font-weight: bold;
+        left: -10%; /* Adjust position for better visibility */
+        
+    }
+}
+
+/******************** Moving Text... */
+.moving-text {
+    position: absolute;
+    bottom: -3%;
+    left: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #d62828;
+    white-space: nowrap;
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 5px 10px;
+    border-radius: 5px; /* Smooth edges */
+    z-index: 10; /* High value to keep on top */
+    width: aut;
+    animation: moveText 7s linear infinite;
+}
+
+@keyframes moveText {
+    0% {
+        left: -200px;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+
+/**************************** scroll-top button... */
+.scroll-top-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: goldenrod;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+    display: none;
+    z-index: 100;
+}
+.scroll-top-btn:hover{
+    background-color: darkgoldenrod;
+}
+
+.scroll-top-btn.show{
+    display: block;
+}
+
+
+/**************************** Footer Styling.... */
+footer{
+    color: goldenrod;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    max-width: 1000px;
+    align-items: center;
+    margin: auto;
+    margin-top: 40px;
+    
+}
+
+.footer-container{
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    
+}
+
+/************ Info Section... */
+.footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer-item img {
+    width: 25px;
+    height: auto;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-item img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/***************** Main Footer Text... */
+.footer-main {
+    flex: 1;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/**************** Delivery Section... */
+.footer-delivery {
+    display: flex;
+    gap: 2px;
+    justify-content: flex-end;
+}
+
+.footer-delivery img {
+    width:35px;
+}
+
+/************* Social Links... */
+.social-link {
+    display: flex;
+    text-decoration: none;
+    color: goldenrod;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-link:hover {
+    color: white;
+}
+
+/************************ Responsive adjustment for mobile ... */
+@media (max-width: 768px) {
+    .footer-item{
+        text-align: left;
+        margin-bottom: 2px;
+    }
+
+    .footer-main{
+        text-align: left;  /*at the bottom */
+        
+    }
+
+    .footer-main{
+        font-size: 9px;
+    }
+
+    .footer-item.social-delivery {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .footer-item.social-delivery .social-link {
+        justify-content: flex-start;
+    }
+
+    .footer-item.social-delivery .footer-delivery {
+        justify-content: flex-end;
+        gap: 0px;
+    }
+}
