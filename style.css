@@ -156,6 +156,10 @@ body{
         display: block;
     }
 
+    .header{
+        margin-left: -10px;
+    }
+
     .navigation ul {
         display: none;
         flex-direction: column;
